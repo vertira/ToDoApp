@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+		<link rel="stylesheet" href="style.css" id="style-theme" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<title>Frontend Mentor | Todo app</title>
+
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="header-card">
+				<h1>TODO</h1>
+				<img src="/src/images/icon-moon.svg" alt="moon icon" id="theme" />
+			</div>
+		</header>
+		<main>
+			<section class="todo">
+				<form action="">
+					<span class="checkmark"
+						><img
+							src="/src/images/icon-check.svg"
+							alt="check icon"
+							class="check-icon-main"
+					/></span>
+					<input
+						type="text"
+						placeholder="Create a new todo..."
+						class="input-text"
+					/>
+				</form>
+			</section>
+			<section class="list">
+				<div >
+					<ul>
+						<li class="default-state" draggable="false">Nothing to Display</li>
+					</ul>
+					<div class="list__bottom">
+						<div class="list__bottom-firstspan">
+							<span>0 items left</span>
+						</div>
+						<div class="list__bottom-buttons">
+							<span class="active-button">All</span>
+							<span>Active</span>
+							<span>Completed</span>
+						</div>
+						<div class="list__bottom-lastspan">
+							<span>Clear completed</span>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<div class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="#">Your Name Here</a>.
+		</div>
+		<script src="/src/app.js"></script>
+	</body>
+</html>

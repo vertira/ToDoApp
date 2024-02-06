@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+:root {
+	--defaultFont: "Josefin Sans", sans-serif;
+	/* ### Primary */
+	--BrightBlue: hsl(220, 98%, 61%);
+	--CheckBackground: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+
+	/* ### Light Theme */
+
+	--VeryLightGray: hsl(0, 0%, 98%);
+	--VeryLightGrayishBlue: hsl(236, 33%, 92%);
+	--LightGrayishBlue: hsl(233, 11%, 84%);
+	--DarkGrayishBlue: hsl(236, 9%, 61%);
+	--VeryDarkGrayishBlue: hsl(235, 19%, 35%);
+
+	/* ### Dark Theme */
+
+	--VeryDarkBlue: hsl(235, 21%, 11%);
+	--VeryDarkDesaturatedBlue: hsl(235, 24%, 19%);
+	--LightGrayishBlue: hsl(234, 39%, 85%);
+	/* Hover */
+	--LightGrayishBlue: hsl(236, 33%, 92%);
+	--DarkGrayishBlue: hsl(233, 11%, 52%);
+	--VeryDarkGrayishBlue: hsl(233, 14%, 35%);
+	--VeryDarkGrayishBlue: hsl(237, 14%, 26%);
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: var(--defaultFont);
+}
+.attribution {
+	position: absolute;
+	bottom: 0;
+	right: 50%;
+	transform: translate(50%, 0);
+}
+body {
+	min-height: 100vh;
+	background-image: url(/src/images/bg-desktop-dark.jpg);
+	background-position: top;
+	background-size: 100vw 40vh;
+	background-repeat: no-repeat;
+	background-color: var(--VeryDarkBlue);
+}
+
+/* HEADER */
+
+header {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	top: 85px;
+}
+h1 {
+	letter-spacing: 16px;
+	font-size: 2.5rem;
+	font-weight: 700;
+	color: var(--VeryLightGray);
+}
+
+.header-card {
+	display: flex;
+	width: 39vw;
+	justify-content: space-between;
+	align-items: center;
+}
+.header-card img {
+	height: clamp(1rem, 0.1667rem + 2.6667vw, 2.5rem);
+}
+
+.todo {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	top: 125px;
+}
+.checkmark {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 50%;
+	left: 31%;
+	transform: translate(50%, -50%);
+	border-radius: 50%;
+	border: 1px solid var(--VeryLightGrayishBlue);
+	user-select: none;
+}
+.active {
+	background: linear-gradient(
+		to bottom left,
+		hsl(192, 100%, 67%),
+		hsl(280, 87%, 65%)
+	);
+}
+.input-text {
+	display: flex;
+	align-items: center;
+	width: 39vw;
+	height: 6vh;
+	padding-left: 3.5rem;
+	border: none;
+	outline: none;
+	font-size: 1.1rem;
+	color: var(--LightGrayishBlue);
+	background-color: var(--VeryDarkDesaturatedBlue);
+	border-radius: 0.2rem;
+}
+
+/* LIST */
+
+.list {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	top: 160px;
+}
+
+ul {
+	width: 39vw;
+	position: relative;
+}
+li:first-child {
+	border-radius: 0.2rem 0.2rem 0 0;
+}
+li {
+	display: flex;
+	align-items: center;
+	width: 39vw;
+	height: 6vh;
+	padding-left: 3.5rem;
+	border: none;
+	border-bottom: 1px solid rgba(119, 122, 146, 0.2);
+	outline: none;
+	font-size: 1.1rem;
+	color: var(--VeryLightGray);
+	background-color: var(--VeryDarkDesaturatedBlue);
+	border-radius: 0;
+	list-style-type: none;
+}
+.checkmark-list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 20px;
+	height: 20px;
+	left: 20px;
+	position: absolute;
+	border-radius: 50%;
+	border: 1px solid var(--VeryLightGrayishBlue);
+	cursor: pointer;
+	user-select: none;
+}
+.check-icon-main {
+	display: none;
+}
+.check-icon {
+	display: none;
+}
+.display {
+	display: block;
+}
+.delate-list {
+	width: 20px;
+	height: 20px;
+	right: 20px;
+	position: absolute;
+	border-radius: 50%;
+	cursor: pointer;
+	user-select: none;
+}
+
+/* BOTTOM */
+
+.list__bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 39vw;
+	height: 5vh;
+	border: none;
+	outline: none;
+	font-size: 0.9rem;
+	padding: 0 1rem;
+	color: var(--DarkGrayishBlue);
+	background-color: var(--VeryDarkDesaturatedBlue);
+	border-radius: 0 0 0.4rem 0.4rem;
+	user-select: none;
+}
+.list__bottom-buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	font-weight: 700;
+}
+.list__bottom-buttons span:hover,
+.list__bottom-lastspan span:hover {
+	color: var(--VeryDarkGrayishBlue);
+	cursor: pointer;
+}
+.active-button {
+	color: var(--BrightBlue);
+}
+.default-state {
+	display: flex;
+	padding: 0;
+	justify-content: center;
+	align-items: center;
+}
+#theme:hover {
+	position: relative;
+	cursor: pointer;
+	animation: justUp 0.5s ease;
+}
+
+@keyframes justUp {
+	0% {
+		top: 0px;
+	}
+	50% {
+		top: -5px;
+	}
+	100% {
+		top: 0px;
+	}
+}
+
+@media (max-width: 800px) {
+	.header-card {
+		width: 90vw;
+	}
+	.input-text {
+		width: 90vw;
+	}
+	h1 {
+		font-size: 2.5rem;
+	}
+	ul {
+		width: 90vw;
+	}
+	li {
+		width: 90vw;
+	}
+	.list__bottom {
+		width: 90vw;
+	}
+
+	.list__bottom-buttons {
+		position: absolute;
+		bottom: -10vh;
+		left: 5vw;
+		display: flex;
+		width: 90vw;
+		height: 6vh;
+		border-radius: 0.4rem;
+		background-color: var(--VeryDarkDesaturatedBlue);
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+		font-weight: 700;
+	}
+	form {
+		position: relative;
+	}
+	.checkmark {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translate(100%, -50%);
+	}
+}
