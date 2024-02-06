@@ -191,11 +191,11 @@ bottomButtons[2].addEventListener("click", filterCompleted);
 // THEME DARK/LIGHT
 const changeTheme = () => {
 	if (!isThemeLight) {
-		styleTheme.setAttribute("href", "style.css");
+		styleTheme.setAttribute("href", "/src/style.css");
 		theme.setAttribute("src", "/src/images/icon-moon.svg");
 		isThemeLight = true;
 	} else {
-		styleTheme.setAttribute("href", "styleDark.css");
+		styleTheme.setAttribute("href", "src/styleDark.css");
 		theme.setAttribute("src", "/src/images/icon-sun.svg");
 		isThemeLight = false;
 	}
